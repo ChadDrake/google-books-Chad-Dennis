@@ -17,7 +17,7 @@ export default function Form(props) {
           <option value="ebooks">Ebooks</option>
         </select>
 
-        <button onClick={() => props.clickList()}> Search </button>
+        <button onClick={() => props.clickList('#filter', '#search-terms')}> Search </button>
       </form>
     </div>
   );

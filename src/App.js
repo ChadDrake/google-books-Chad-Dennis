@@ -2,10 +2,19 @@ import React, { Component } from "react";
 import Form from "./Form";
 
 class App extends Component {
-  state = {};
+  state = {
+    books:[],
+    filter:'all',
+    searchTerm:''
 
-  getList() {
-    fetch();
+  };
+
+  getList(filterTerm,search) {
+    this.setState({
+      filter:filterTerm,
+      searchTerm:search
+    })
+    console.log(this.state)
   }
   render() {
     return (
