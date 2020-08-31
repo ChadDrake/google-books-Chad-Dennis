@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "./Form";
-
+import ResultList from "./ResultList";
 class App extends Component {
   state = {
     books: [],
@@ -21,6 +21,7 @@ class App extends Component {
         <h1>Google Books</h1>
         <main>
           <Form clickList={this.getList} />
+          <ResultList />
         </main>
       </div>
     );
