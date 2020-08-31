@@ -3,7 +3,15 @@ import React from "react";
 export default function Form(props) {
   return (
     <div className="form">
-      <form>
+      <form
+        onSubmit={(e) =>
+          props.clickList(
+            e,
+            e.target.filter.value,
+            e.target["search-terms"].value
+          )
+        }
+      >
         <label htmlFor="search-terms">Search Terms</label>
         <input type="text" id="search-terms" name="search-terms" />
 
@@ -17,7 +25,7 @@ export default function Form(props) {
           <option value="ebooks">Ebooks</option>
         </select>
 
-        <button onClick={() => props.clickList('#filter', '#search-terms')}> Search </button>
+        <button>Search</button>
       </form>
     </div>
   );

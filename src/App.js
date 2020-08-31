@@ -8,12 +8,12 @@ class App extends Component {
     searchTerm: "",
   };
 
-  getList = (filterTerm, search) => {
+  getList = (e, filterTerm, search) => {
+    e.preventDefault();
     this.setState({
       filter: filterTerm,
       searchTerm: search,
     });
-    console.log(this.state);
   };
   render() {
     return (
