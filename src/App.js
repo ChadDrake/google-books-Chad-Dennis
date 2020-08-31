@@ -3,19 +3,18 @@ import Form from "./Form";
 
 class App extends Component {
   state = {
-    books:[],
-    filter:'all',
-    searchTerm:''
-
+    books: [],
+    filter: "all",
+    searchTerm: "",
   };
 
-  getList(filterTerm,search) {
+  getList = (filterTerm, search) => {
     this.setState({
-      filter:filterTerm,
-      searchTerm:search
-    })
-    console.log(this.state)
-  }
+      filter: filterTerm,
+      searchTerm: search,
+    });
+    console.log(this.state);
+  };
   render() {
     return (
       <div className="App">
